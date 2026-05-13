@@ -706,7 +706,7 @@ img {
 }
 
 .page-footer {
-  padding: 10px;
+  padding: 0px;
 }
 
 .logo-footer .logo {
@@ -739,12 +739,16 @@ img {
 .mobile-menu {
   position: fixed;
 
+  flex-direction: column;
+  align-items: flex-start;
+
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
-
   background-color: #ffffff;
+
+  display: none;
 }
 
 .close-button {
@@ -832,7 +836,6 @@ img {
   padding: 16px;
 }
 
-.mobile-menu,
 .nav,
 .page-address,
 .why-us-img,
@@ -873,8 +876,6 @@ img {
 
 .is-open {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /*tablet*/
@@ -1008,14 +1009,18 @@ img {
     padding: 0;
   }
 
-  .modal-section {
-    /*display: flex;*/
+  /*.modal-section {
     display: none;
     justify-content: center;
-  }
+  }*/
 
   .form-div {
     margin-top: 96px;
+  }
+
+  .mobile-menu,
+  .mobile-modal-section {
+    display: none;
   }
 }
 
@@ -1073,5 +1078,13 @@ img {
   .footer-container {
     width: 1440px;
     justify-content: space-evenly;
+  }
+}
+
+@media (min-resolution: 2x) {
+  .page-title-section {
+    background-image:
+      linear-gradient(rgba(46, 47, 66, 0.7)),
+      url(../images/people-office\ 2x.jpg);
   }
 }
